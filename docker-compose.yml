@@ -1,0 +1,13 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: imagen-parcial2
+    container_name: parcial2-repetido
+    restart: always
+    ports:
+      - "8090:80"
+    volumes:
+      - .:/var/www/html
+      - /var/www/html/vendorS
